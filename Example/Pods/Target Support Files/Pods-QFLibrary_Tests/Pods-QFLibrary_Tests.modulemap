@@ -1,0 +1,6 @@
+framework module Pods_QFLibrary_Tests {
+  umbrella header "Pods-QFLibrary_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

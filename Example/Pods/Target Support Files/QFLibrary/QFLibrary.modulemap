@@ -1,0 +1,6 @@
+framework module QFLibrary {
+  umbrella header "QFLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

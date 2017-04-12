@@ -1,0 +1,6 @@
+framework module Pods_QFLibrary_Example {
+  umbrella header "Pods-QFLibrary_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
