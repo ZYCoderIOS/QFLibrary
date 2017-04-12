@@ -7,6 +7,8 @@
 //
 #import "QF_Client_HTTP.h"
 #import "AFNetworking.h"
+#import "AFHTTPSessionManager.h"
+
 #import <ReactiveCocoa/RACSubject.h>
 #import <CommonCrypto/CommonDigest.h>
 #import "Base64.h"
@@ -109,7 +111,8 @@ static QF_Client_HTTP * gSharedInstance = nil;
     if (type == ReturnTypeJson)
     {
         _manager.responseSerializer = [AFJSONResponseSerializer serializer];
-        [_manager POST:subServerName  parameters:newParm  progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
+
+        [_manager POST:subServerName  parameters:newParm success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
          {
              NSLog(@"请求结果-->%@\n%@",subServerName,responseObject);
              [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -134,7 +137,7 @@ static QF_Client_HTTP * gSharedInstance = nil;
             _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
         }
         
-        [_manager GET:subServerName  parameters:newParm  progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
+        [_manager GET:subServerName  parameters:newParm success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
          {
              [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
              [subscriber sendNext:responseObject];

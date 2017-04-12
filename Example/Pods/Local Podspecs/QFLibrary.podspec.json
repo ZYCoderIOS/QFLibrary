@@ -18,5 +18,13 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "QFLibrary/Classes/**/*"
+  "source_files": "QFLibrary/Classes/**/*",
+  "dependencies": {
+    "AFNetworking": [
+      "~> 2.3"
+    ],
+    "ReactiveCocoa": [
+      "~> 2.3.1"
+    ]
+  }
 }

@@ -1,4 +1,25 @@
 PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
   - Expecta (1.0.5)
   - Expecta+Snapshots (3.1.1):
     - Expecta (~> 1.0)
@@ -9,14 +30,25 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - QFLibrary (0.1.0)
+  - QFLibrary (0.1.0):
+    - AFNetworking (~> 2.3)
+    - ReactiveCocoa (~> 2.3.1)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI (= 2.3.1)
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
   - Specta (1.0.6)
 
 DEPENDENCIES:
+  - AFNetworking (~> 2.3)
   - Expecta
   - Expecta+Snapshots
   - FBSnapshotTestCase
   - QFLibrary (from `../`)
+  - ReactiveCocoa (~> 2.3.1)
   - Specta
 
 EXTERNAL SOURCES:
@@ -24,12 +56,14 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Expecta+Snapshots: dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  QFLibrary: 2d8bd2b930696b561856c37db35332994812e1bb
+  QFLibrary: 93bdfc99e8413aba64d74ddc4c873b94d2cb95d2
+  ReactiveCocoa: 3fe9b233ca6db810e86681b5749488564c1179a1
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
-PODFILE CHECKSUM: 2c3a50e401b2d7d4b95115358a56e5f3a79fcb99
+PODFILE CHECKSUM: 22edfc78e277ada021e7390a8354748a74c1c4be
 
 COCOAPODS: 1.2.0

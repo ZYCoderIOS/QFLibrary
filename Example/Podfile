@@ -10,5 +10,7 @@ target 'QFLibrary_Example' do
   pod 'Expecta'
   pod 'FBSnapshotTestCase'
   pod 'Expecta+Snapshots'
+  pod 'AFNetworking', '~> 2.3'
+  pod 'ReactiveCocoa', '~> 2.3.1'
   end
 end
