@@ -16,12 +16,6 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/ZYCoderIOS/QFLibrary.git', :tag => s.version.to_s }
     s.ios.deployment_target = '8.0'
 
-    s.subspec 'LibrarySDKQF' do |ss|
-        ss.source_files = 'QFLibrary/Classes/**/*'
-        ss.dependency 'AFNetworking', '~> 2.3'
-        ss.dependency 'ReactiveCocoa', '~> 2.3.1'
-    end
-
     #安全
     s.subspec 'QFSecurity' do |sp|
         sp.source_files = 'QFLibrary/Classes/QFSecurity/*'
@@ -39,8 +33,6 @@ Pod::Spec.new do |s|
     s.subspec 'QFClasssExtend' do |sp|
         sp.source_files = 'QFLibrary/Classes/QFClasssExtend/*'
     end
-
-
 
     #工具库
     s.subspec 'QFTool' do |sp|
